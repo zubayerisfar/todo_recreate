@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:go_router/go_router.dart";
 
 class AddTodo extends StatefulWidget {
   const AddTodo({super.key});
@@ -52,7 +53,7 @@ class _AddTodoState extends State<AddTodo> {
                 child: FilledButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      Navigator.pop(context);
+                      context.pop();
                     }
                   },
                   child: const Text("Add"),
